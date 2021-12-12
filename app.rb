@@ -1,7 +1,5 @@
 require 'readline'
-require_relative './graphical_editor'
-
-e = GraphicalEditor.new
+require_relative './lib/graphical_editor'
 
 def editor 
   @editor ||= GraphicalEditor.new
@@ -12,7 +10,7 @@ while input = Readline.readline(">", true)
     p "Exiting..." and break if input == "X" 
   
     editor.process(input)
-  rescue ArgumentError => e
+  rescue EditorError => e
     p e.message
   end
 end  
