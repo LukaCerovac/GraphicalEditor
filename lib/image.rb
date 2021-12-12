@@ -4,7 +4,7 @@ class Image
 	attr_accessor(:image, :m, :n)
 
 	def generate_image(m, n)
-		valid_dimensions(m,n)
+		valid_dimensions(m, n)
     @m = m
     @n = n
     @image = Array.new(n) {Array.new(m, "O")}
@@ -15,9 +15,9 @@ class Image
 		puts image.map { |x| x.join }
 	end
 
-	def clear_image(image)
+	def clear_image
 		return if image == nil
-		image.generate_image(image[0].length, image.length)
+	  generate_image(image[0].length, image.length)
 	end
 
   private
