@@ -1,4 +1,4 @@
-require_relative './Errors/editor_error'
+require_relative './errors/editor_error'
 
 class Image
 	attr_accessor(:image, :m, :n)

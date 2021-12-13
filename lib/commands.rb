@@ -1,4 +1,4 @@
-require_relative './Errors/editor_error'
+require_relative './errors/editor_error'
 
 class Commands
 	attr_reader(:image)
